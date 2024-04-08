@@ -485,7 +485,12 @@ namespace Computational_Problem_Solving
         {
             try
             {
-                
+                while (s.Contains(part)) // Continue until 'part' is found in 's'
+                {
+                    int index = s.IndexOf(part); // Find the index of the first occurrence
+                    s = s.Remove(index, part.Length); // Remove 'part' from 's'
+                }
+                return s; // Return the modified string
             }
             catch (Exception)
             {
